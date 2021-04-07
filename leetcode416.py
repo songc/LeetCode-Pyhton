@@ -61,6 +61,8 @@ class Solution2:
                 elif nums[i]>j:
                     if dp[i-1][j]:
                         dp[i][j]=True
+            if dp[i][div]:
+                return True
         return dp[n-1][div]
 
 sol = Solution2()

@@ -8,3 +8,14 @@ class Solution:
         for i in range(1,num+1):
             ans.append(ans[i>>1]+(i&1))
         return ans
+
+class Solution2:
+    def countBits(self, num: int) -> List[int]:
+        ans = [0]
+        for i in range(1,num+1):
+            ans.append(ans[i&(i-1)]+1)
+        return ans
+
+sol = Solution2()
+
+print(sol.countBits(10))

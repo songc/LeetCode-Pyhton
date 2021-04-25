@@ -20,4 +20,18 @@ class Solution:
         if root:
             inOrder(root)
         return ans
+
+class Solution2:
+    def inorderTraversal(self, root: TreeNode)-> List[int]:
+        ans = []
+        stack = []
+        while stack or root:
+            if root:
+                stack.append(root)
+                root = root.left
+                continue
+            node = stack.pop()
+            ans.append(node.val)
+            root=node.right
+        return ans
         

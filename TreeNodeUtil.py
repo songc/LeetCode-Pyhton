@@ -23,3 +23,33 @@ def createTreeFromList(nums):
             deque.append(node.right)
             ind+=1        
     return root
+
+import collections
+from typing import List
+class Solution:
+    def inorderTraversal(self, root: TreeNode)-> List[int]:
+        ans = []
+        stack = []
+        while stack or root:
+            if root:
+                stack.append(root)
+                root = root.left
+                continue
+            node = stack.pop()
+            ans.append(node.val)
+            root=node.right
+        return ans
+
+class Solution2:
+    def preorderTraversal(self, root: TreeNode)-> List[int]:
+        ans = []
+        stack = []
+        while stack or root:
+            if root:
+                ans.append(root.val)
+                stack.append(root)
+                root = root.left
+                continue
+            node = stack.pop()
+            root=node.right
+        return ans

@@ -18,6 +18,8 @@ def createTreeFromList(nums):
                 node.left = TreeNode(nums[ind])
             deque.append(node.left)
             ind+=1
+            if ind>=len(nums):
+                break
             if nums[ind] is not None:
                 node.right = TreeNode(nums[ind])
             deque.append(node.right)

@@ -21,6 +21,7 @@ import collections
 
 from TreeNodeUtil import createTreeFromList
 
+# dfs  枚举
 class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> int:
         def dfs(tree):
@@ -41,6 +42,7 @@ class Solution:
             return counter[sum]
         return 0
 
+# 前缀和，dfs
 class Solution2:
     def pathSum(self, root: TreeNode, sum: int) -> int:
         preSum = collections.defaultdict(int)

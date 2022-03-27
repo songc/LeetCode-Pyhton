@@ -3,6 +3,7 @@
 
 # 提示 n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1
 
+# 求 5 的质因子数
 
 class Solution:
     def trailingZeroes(self, n: int) -> int:

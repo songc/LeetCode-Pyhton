@@ -25,6 +25,14 @@ class Solution:
             if k not in bandedSet:
                 return k
 
+class Solution:
+    def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
+        bandedSet = set(banned)
+        counter = collections.Counter(i.lower() for i in re.split(r'\W+',paragraph))
+        for k,num in counter.most_common():
+            if k not in bandedSet:
+                return k
+
 sol = Solution()
 paragraph = "Bob. hIt, baLl"
 banned = ["bob", "hit"]

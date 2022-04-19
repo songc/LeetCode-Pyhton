@@ -45,7 +45,7 @@ class NestedInteger:
        Return None if this NestedInteger holds a single integer
        :rtype List[NestedInteger]
        """
-
+# 解法有问题
 class Solution:
     def deserialize(self, s: str) :
         if s[0] !='[':
